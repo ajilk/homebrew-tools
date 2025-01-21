@@ -5,20 +5,20 @@
 class Leap < Formula
   desc ""
   homepage "https://github.com/ajilk/tools"
-  version "1.0.15"
+  version "1.0.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ajilk/leap/releases/download/v1.0.15/leap_Darwin_x86_64.tar.gz"
-      sha256 "76d19258c2607c91b1aa05b9fce8217db8903d4963891392fc14f1fb591c02c0"
+      url "https://github.com/ajilk/leap/releases/download/v1.0.16/leap_Darwin_x86_64.tar.gz"
+      sha256 "0d5c04326283845398798ed0dc142bb1805101216b975ff285e68ed8508087b9"
 
       def install
         bin.install "leap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ajilk/leap/releases/download/v1.0.15/leap_Darwin_arm64.tar.gz"
-      sha256 "6946a720466c2644d2a5127eca342a86d6484435aaacb8e9a58fe22ed2ab21b8"
+      url "https://github.com/ajilk/leap/releases/download/v1.0.16/leap_Darwin_arm64.tar.gz"
+      sha256 "b16f0a9a95564dedbe87a314744c34f9ad0d6dda91653e8b19986c17940cca46"
 
       def install
         bin.install "leap"
@@ -29,8 +29,8 @@ class Leap < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ajilk/leap/releases/download/v1.0.15/leap_Linux_x86_64.tar.gz"
-        sha256 "3c48dc2cca944d0967b5cfd21fa3ac95d356b659e1f2545ea8f8616b0c0622dd"
+        url "https://github.com/ajilk/leap/releases/download/v1.0.16/leap_Linux_x86_64.tar.gz"
+        sha256 "3c771c056ce35e9f2b0e4a67f66447234f31e50c37b24b4bda439edee6309e45"
 
         def install
           bin.install "leap"
@@ -39,8 +39,8 @@ class Leap < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ajilk/leap/releases/download/v1.0.15/leap_Linux_arm64.tar.gz"
-        sha256 "8c39b2d801ba4b4ed3d91a655e466490060890d29b0bbfeca1099bf320a61cb8"
+        url "https://github.com/ajilk/leap/releases/download/v1.0.16/leap_Linux_arm64.tar.gz"
+        sha256 "612759e24e4b0e42619999828a79f98991155af57bf992ad930c016d62b79c07"
 
         def install
           bin.install "leap"
