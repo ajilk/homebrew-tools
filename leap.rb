@@ -5,47 +5,23 @@
 class Leap < Formula
   desc ""
   homepage "https://github.com/ajilk/tools"
-  version "1.0.18"
+  version "1.0.23"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ajilk/leap/releases/download/v1.0.18/leap_Darwin_x86_64.tar.gz"
-      sha256 "ca8ca429234ffc1566623f3014e5e2db28e776d9e80c741363affbf8eb8b0edf"
+  if Hardware::CPU.intel?
+    url "https://github.com/ajilk/leap/releases/download/v1.0.23/leap_Darwin_x86_64.tar.gz"
+    sha256 "a87b419e81012f1bdd15c1bbb72460ff592128644e030554dd83d8261d0843f9"
 
-      def install
-        bin.install "leap"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/ajilk/leap/releases/download/v1.0.18/leap_Darwin_arm64.tar.gz"
-      sha256 "92684ae12459974a1e0553470114b9e6a08d58b46c1ac06bae61d219d36bade8"
-
-      def install
-        bin.install "leap"
-      end
+    def install
+      bin.install "leap"
     end
   end
+  if Hardware::CPU.arm?
+    url "https://github.com/ajilk/leap/releases/download/v1.0.23/leap_Darwin_arm64.tar.gz"
+    sha256 "bcc71d9ee3a2ed378279371b907e2d9d621fcc845620f7cbeaa961714193738a"
 
-  on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ajilk/leap/releases/download/v1.0.18/leap_Linux_x86_64.tar.gz"
-        sha256 "108ac92b334f3b00f2fa30431d0e76fa7d8ce0feed5eff311be6ec6c2094d3fa"
-
-        def install
-          bin.install "leap"
-        end
-      end
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ajilk/leap/releases/download/v1.0.18/leap_Linux_arm64.tar.gz"
-        sha256 "af7df06d7f9c965fe52cb1132b64e2e5090478341f7f7324fbc4fef957e037c8"
-
-        def install
-          bin.install "leap"
-        end
-      end
+    def install
+      bin.install "leap"
     end
   end
 end
