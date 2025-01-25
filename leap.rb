@@ -5,11 +5,11 @@
 class Leap < Formula
   desc ""
   homepage "https://github.com/ajilk/tools"
-  version "1.0.39"
+  version "1.0.40"
   depends_on :macos
 
-  url "https://github.com/ajilk/leap/releases/download/v1.0.39/leap_Darwin.tar.gz"
-  sha256 "3a8a187170bb9d5b533ecf2be81ecb6c89233feb7691819b53eda0a26ca93f7b"
+  url "https://github.com/ajilk/leap/releases/download/v1.0.40/leap_Darwin.tar.gz"
+  sha256 "807124f7bd11735912ba24aeae5305a413a262f164b76c7ed0c6d30afa897cd8"
 
   def install
     bin.install "leap"
