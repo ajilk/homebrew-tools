@@ -5,23 +5,23 @@
 class Leap < Formula
   desc ""
   homepage "https://github.com/ajilk/tools"
-  version "1.0.37"
+  version "1.0.39"
   depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/ajilk/leap/releases/download/v1.0.37/leap_Darwin_x86_64.tar.gz"
-    sha256 "be32283cd46e15066384edb896bdf2a88d80b80d48bed21e9cd739fc89767a25"
+  url "https://github.com/ajilk/leap/releases/download/v1.0.39/leap_Darwin.tar.gz"
+  sha256 "3a8a187170bb9d5b533ecf2be81ecb6c89233feb7691819b53eda0a26ca93f7b"
 
-    def install
-      bin.install "leap"
-    end
+  def install
+    bin.install "leap"
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/ajilk/leap/releases/download/v1.0.37/leap_Darwin_arm64.tar.gz"
-    sha256 "300fb3448131d5004a89374c00bbcbb217e6974c6cf2538806f20fe5a897c80e"
 
-    def install
-      bin.install "leap"
+  if Hardware::CPU.arm?
+    def caveats
+      <<~EOS
+        The darwin_arm64 architecture is not supported for the Leap
+        formula at this time. The darwin_amd64 binary may work in compatibility
+        mode, but it might not be fully supported.
+      EOS
     end
   end
 end
