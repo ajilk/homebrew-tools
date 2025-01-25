@@ -5,20 +5,20 @@
 class Leap < Formula
   desc ""
   homepage "https://github.com/ajilk/tools"
-  version "1.0.36"
+  version "1.0.37"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/ajilk/leap/releases/download/v1.0.36/leap_Darwin_x86_64.tar.gz"
-    sha256 "9dadc70588d4b7b9cf5175bc5a6e38a0f0c6321efdb588ac4f290768873e1793"
+    url "https://github.com/ajilk/leap/releases/download/v1.0.37/leap_Darwin_x86_64.tar.gz"
+    sha256 "be32283cd46e15066384edb896bdf2a88d80b80d48bed21e9cd739fc89767a25"
 
     def install
       bin.install "leap"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/ajilk/leap/releases/download/v1.0.36/leap_Darwin_arm64.tar.gz"
-    sha256 "e29d911568af2ad280875bf5728acd1b35d63aebc9e7cd3779f24c33310ddfba"
+    url "https://github.com/ajilk/leap/releases/download/v1.0.37/leap_Darwin_arm64.tar.gz"
+    sha256 "300fb3448131d5004a89374c00bbcbb217e6974c6cf2538806f20fe5a897c80e"
 
     def install
       bin.install "leap"
