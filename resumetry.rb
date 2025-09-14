@@ -4,10 +4,10 @@
 class Resumetry < Formula
   include Language::Python::Virtualenv
 
-  desc "Config + template → PDF generator (LaTeX), Typer-based CLI"
+  desc "Config + template → PDF generator (LaTeX)"
   homepage "https://github.com/ajilk/resumetry"
-  url "https://github.com/ajilk/resumetry/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "45ccebda1045b5a72047204765a1a381d9e9d9e1f87913eaaf1cf662b6b97a40"
+  url "https://github.com/ajilk/resumetry/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "3cbe10db4e396d7c655fdc7edfdd5b9f7ae740ef8b8f439e69d71c5bbb78dbeb"
   license "MIT"
 
   depends_on "python@3.12"
