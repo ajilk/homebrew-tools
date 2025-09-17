@@ -7,7 +7,7 @@ class Resumetry < Formula
   desc "Config + template → PDF generator (LaTeX)"
   homepage "https://github.com/ajilk/resumetry"
   url "https://github.com/ajilk/resumetry/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "986b774ecbea8969b407db60d4149a7fe313d1afff0fb1307c8f060f063ecfab"
+  sha256 "556847853131aa55e30eb9c9b8aab4d6824ba28f6cdc85f4f6daac8f7ec5951a"
   license "MIT"
 
   depends_on "python@3.12"
